@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title>HBD Soumya</title>
+	<meta name="hello" content="page description"/>
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		
+		.header {
+			  overflow: hidden;
+			  background-color:  black;
+			  
+			}
+		.header a {
+			  float: left;
+			  display: block;
+			  color:white;
+			  text-align: center;
+			  padding: 20px 20px;
+			  text-decoration: none;
+			  font-size: 25px;
+			}
+		.center {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  width: 50%;
+		}	
+		.header .icon {
+				display: none;
+			}
+		.photos{
+				display: none;
+			}
+		@media screen and (max-width: 600px) {
+			  .header a:not(:first-child) {display: none;}
+			  .header a.icon {
+					float: right;
+					display: block;
+					
+			  }
+			}
+		@media screen and (max-width: 600px) {
+			  .header.responsive {position: relative;}
+			  .header.responsive a.icon {
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+				.header.responsive a {
+					float: none;
+					display: block;
+					text-align: left;
+			  }
+			}
+
+		body{
+			background: url(https://storage.pixteller.com/designs/designs-images/2019-03-27/05/love-and-passion-background-backgrounds-romantic-1-5c9b9947439b9.png);
+			background-repeat:no-repeat; 
+			background-size:cover; 
+			background-position:center center;
+			height:1366px;
+			margin: auto;
+			border:black;
+			border-width:10px;
+			border-style:solid;
+		}
+		</style>
+</head>
+<body >
+
+<div class="header" id="myHeader">
+  
+	<a href='#Logo' style="color:white"><img alt="" src="C:\Users\lenovo\Desktop\slogo.JPG" width="60px" height="40px"></a>
+    <a href='#Event' style="color:white">HBD</a>
+    <a href='#Couple' style="color:white">MessageForYou</a>
+    <a href='#memories' style="color:white">Archives</a>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		<i class="fa fa-bars"></i>
+  </a>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myHeader");
+  if (x.className === "header") {
+    x.className += " responsive";
+  } else {
+    x.className = "header";
+  }
+}
+function play(){
+	var audio=document.getElementById("audio");
+	audio.play();
+}
+function invisible(){
+		var y = document.getElementById("myButton");
+		y.style.display="none";
+}
+function visible(){
+	var k=document.getElementById("photos");
+	k.style.display="block";
+}
+</script>
+<button id="myButton" type="button" onclick="play();invisible();visible();" style="position:absolute;top:50%;left:50%;  background:transparent;font-size: 25px;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);"> Let The Party Begin </button>
+<audio id="audio" src="C:\Users\lenovo\Downloads\04 Happy Birthday (ABCD  2) Sachin Jigar 190Kbps.mp3"></audio>
+<div id="Heading">
+	<H1 align="center"><b>HAPPY BIRTHDAY SOUMYA</b></H1></div>
+<div id="photos" style="display:none;">
+	<img alt="" src="C:\Users\lenovo\Desktop\shiv.JPG" class="center">
+</div>
