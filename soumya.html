@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<style type="text/css">
 		
 		.header {
@@ -17,29 +18,22 @@
 			  display: block;
 			  color:white;
 			  text-align: center;
-			  padding: 20px 20px;
+			  padding: 15px 15px;
 			  text-decoration: none;
 			  font-size: 25px;
 			}
-		.center {
-			  display: block;
-			  margin-left: auto;
-			  margin-right: auto;
-			  width: 50%;
-		}	
 		.header .icon {
 				display: none;
 			}
-		.photos{
-				height: 500px;
-				width: 800px;
-				border:10px solid black;
+		
+			.mySlides {
+				display:none;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+					
 			}
-		.photos img{
-				height: 100%;
-				width: 100%;
-			
-			}
+		
 		@media screen and (max-width: 600px) {
 			  .header a:not(:first-child) {display: none;}
 			  .header a.icon {
@@ -72,6 +66,7 @@
 			border:black;
 			border-width:10px;
 			border-style:solid;
+			
 		}
 		</style>
 </head>
@@ -80,9 +75,8 @@
 <div class="header" id="myHeader">
   
 	<a href='#Logo' style="color:white"><img alt="" src="photo/slogo.JPG" width="60px" height="40px"></a>
-    <a href='#Event' style="color:white">HBD</a>
     <a href='#Couple' style="color:white">MessageForYou</a>
-    <a href='#memories' style="color:white">Archives</a>
+    <a href='#memories' style="color:white">Bestowal</a>
 	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		<i class="fa fa-bars"></i>
   </a>
@@ -105,15 +99,39 @@ function invisible(){
 		y.style.display="none";
 }
 function visible(){
-	var k=document.getElementById("photos");
-	k.style.display="block";
+		var y = document.getElementById("message");
+		y.style.display="block";
+}
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); 
 }
 </script>
-<button id="myButton" type="button" onclick="play();invisible();visible();" style="position:absolute;top:50%;left:50%;  background:transparent;font-size: 25px;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);"> Let The Party Begin </button>
+<button id="myButton" type="button" onclick="play();invisible();carousel();visible();" style="position:absolute;top:50%;left:50%;  background:transparent;font-size: 25px;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);"> Let The Party Begin </button>
 <audio id="audio" src="04 Happy Birthday (ABCD  2) Sachin Jigar 190Kbps.mp3"></audio>
 <div id="Heading">
-	<H1 align="center"><b>HAPPY BIRTHDAY SOUMYA</b></H1></div>
-<div id="photos" style="display:none;">
-	<img alt="" src="photo/S1.JPG" class="center">
-	<img alt="" src="photo/S2.JPG" class="center">
+	<H1 align="center"><b><font color="Blue">HAPPY BIRTHDAY SOUMYA</b></H1></div></font>
+<div  id="photos">
+	
+		<img class="myslides" alt="" src="photo/S2.JPG">
+		<img class="myslides" alt="" src="photo/S3.JPG">
+		<img class="myslides"  alt="" src="photo/S4.JPG">
+		<img alt="" src="photo/S5.JPG"class="myslides">
+		<img alt="" src="photo/S6.JPG"class="myslides">
+		
+	
+</div>
+<div id="message" style="display:none;text-align:center;">
+   <p><h3>Happy birthday! I hope all your birthday wishes and dreams come true.” “A wish for you on your birthday, whatever you ask may you receive, whatever you seek may you find, whatever you wish may it be fulfilled on your birthday and always. Happy birthday!” “ Another adventure filled year awaits you</h3>
 </div>
